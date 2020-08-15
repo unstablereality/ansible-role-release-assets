@@ -1,2 +1,2 @@
 ---
-# defaults file for get_release_assets
+  assets_path: "~/"
