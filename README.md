@@ -1,7 +1,7 @@
-Role Name
+release_assets
 =========
 
-A brief description of the role goes here.
+Downloads all assets for a tagged release from a given repository.
 
 Requirements
 ------------
@@ -11,7 +11,18 @@ Any pre-requisites that may not be covered by Ansible itself or the role should 
 Role Variables
 --------------
 
-A description of the settable variables for this role should go here, including any variables that are in defaults/main.yml, vars/main.yml, and any variables that can/should be set via parameters to the role. Any variables that are read from other roles and/or the global scope (ie. hostvars, group vars, etc.) should be mentioned here as well.
+Available variables are listed below (All variables are required):
+
+`github_auth_token:` A [Github Personal Access Token](https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token).
+
+`release_tag:` The tag of the release from which to download the assets.
+
+`github_repo_name:` The name of the repository.
+
+`github_repo_owner:` The user or organization that owns the repository.
+
+`assets_path:` Path where the assets should be downloaded. Will download to  `~/` by default.
+
 
 Dependencies
 ------------
@@ -25,14 +36,19 @@ Including an example of how to use your role (for instance, with variables passe
 
     - hosts: servers
       roles:
-         - { role: username.rolename, x: 42 }
+         - { role: unstablereality.release_assets,
+             github_auth_token: "abcde12345",
+             release_tag: "v0.21",
+             github_repo_name: "my-first-repo",
+             github_repo_owner: "unstablereality",
+             assets_path: "~/my-first-project/assets/" }
 
 License
 -------
 
-BSD
+MIT
 
 Author Information
 ------------------
 
-An optional section for the role authors to include contact information, or a website (HTML is not allowed).
+This role was created in 2020 by [Daniel Soskel][author-website] 
