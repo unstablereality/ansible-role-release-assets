@@ -34,9 +34,9 @@ Example Playbook
 License
 -------
 
-[MIT](LICENSE)
+[MIT](https://github.com/unstablereality/ansible-role-release-assets/blob/master/LICENSE)
 
 Author Information
 ------------------
 
-This role was created in 2020 by [Daniel Soskel](danielsoskel.dev)
+This role was created in 2020 by [Daniel Soskel](https://danielsoskel.dev)
