@@ -51,4 +51,4 @@ MIT
 Author Information
 ------------------
 
-This role was created in 2020 by [Daniel Soskel][author-website] 
+This role was created in 2020 by [Daniel Soskel](danielsoskel.dev) 
