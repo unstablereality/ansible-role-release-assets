@@ -11,6 +11,8 @@ Available variables are listed below (All variables are required):
 
 `github_auth_token:` A [Github Personal Access Token](https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token).
 
+**Note**: Be sure not to include `github_auth_token` directly in your playbooks!  Use `ansible-vault` or another secure method of storage to inject it in at runtime!
+
 `release_tag:` The tag of the release from which to download the assets.
 
 `github_repo_name:` The name of the repository.
