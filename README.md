@@ -24,6 +24,8 @@ Available variables are listed below (All variables are required):
 Example Playbook
 ----------------
 
+**Note**: `github_auth_token` is provided here as an example only. As mentioned above, this should be stored securely in `ansible-vault` or another secure storage.
+
     - hosts: servers
       roles:
          - { role: unstablereality.release_assets,
