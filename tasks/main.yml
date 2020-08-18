@@ -1,4 +1,13 @@
 ---
+- name: "Ensure {{ assets_path }} exists"
+  file:
+    path: "{{ assets_path }}"
+    state: directory
+    owner: cbtadmin
+    recurse: yes
+    mode: 0755
+  become: yes
+
 - name: "Get the list of assets for {{ release_tag }}"
   uri:
     url: "https://api.github.com/repos/{{ github_repo_owner }}/{{ github_repo_name }}/releases/tags/{{ release_tag }}"
