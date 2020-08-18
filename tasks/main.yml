@@ -22,7 +22,7 @@
   command:
     cmd: "curl -L -o {{ assets_path }}{{ item.filename }} -H 'Accept: application/octet-stream' -H 'Authorization: token {{ github_auth_token }}' https://{{ github_auth_token }}:@api.github.com/repos/{{ github_repo_owner }}/{{ github_repo_name }}/releases/assets/{{ item.id }}"
     warn: false
-  creates: "{{ assets_path }}{{ item.filename }}"
+    creates: "{{ assets_path }}{{ item.filename }}"
   loop: "{{ assets.json | json_query(asset_query) }}"
   vars:
     asset_query: "assets[*].{id: id, filename: name}"
