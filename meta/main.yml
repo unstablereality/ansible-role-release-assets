@@ -1,5 +1,5 @@
 galaxy_info:
-  role_name: release-assets
+  role_name: release_assets
   author: unstablereality
   description: Download all release assets from github for a tagged version
 
