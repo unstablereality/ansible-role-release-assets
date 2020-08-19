@@ -19,7 +19,7 @@ Available variables are listed below (All variables are required):
 
 `github_repo_owner:` The user or organization that owns the repository.
 
-`assets_path:` Path where the assets should be downloaded. Will download to  `~/` by default.
+`assets_path:` Path where the assets should be downloaded. If this does not exist, it will be created. Will download to  `~/` by default.
 
 Example Playbook
 ----------------
