@@ -3,7 +3,6 @@
   file:
     path: "{{ assets_path }}"
     state: directory
-    owner: cbtadmin
     recurse: yes
     mode: 0755
   become: yes
