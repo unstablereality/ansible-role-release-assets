@@ -3,6 +3,7 @@
   file:
     path: "{{ assets_path }}"
     state: directory
+    owner: "{{ assets_owner }}"
     recurse: yes
     mode: 0755
   become: yes

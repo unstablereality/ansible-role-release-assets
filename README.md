@@ -19,7 +19,9 @@ Available variables are listed below (All variables are required):
 
 `github_repo_owner:` The user or organization that owns the repository.
 
-`assets_path:` Path where the assets should be downloaded. If this does not exist, it will be created. Will download to  `~/` by default.
+`assets_path:` Path where the assets should be downloaded. If this does not exist, it will be created. Will download to `~/` by default.
+
+`assets_owner:` User account that will be set as owner of the `assets_path`.
 
 Example Playbook
 ----------------
@@ -33,7 +35,8 @@ Example Playbook
              release_tag: "v1.2.3",
              github_repo_name: "my-first-repo",
              github_repo_owner: "unstablereality",
-             assets_path: "~/my-first-project/assets/" }
+             assets_path: "~/my-first-project/assets/"
+             assets_owner: "unstablereality" }
 
 License
 -------
