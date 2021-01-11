@@ -38,6 +38,18 @@ Example Playbook
              assets_path: "~/my-first-project/assets/"
              assets_owner: "unstablereality" }
 
+Alternately, `release-tag` can be omitted and replaced with `latest: true` to download the latest release from GitHub.
+
+    - hosts: servers
+      roles:
+         - { role: unstablereality.release_assets,
+             github_auth_token: "abcde12345",
+             latest: true,
+             github_repo_name: "my-first-repo",
+             github_repo_owner: "unstablereality",
+             assets_path: "~/my-first-project/assets/"
+             assets_owner: "unstablereality" }
+
 License
 -------
 

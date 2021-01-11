@@ -17,6 +17,18 @@
       Authorization: "token {{ github_auth_token }}"
       Accept: "application/vnd.github.v3+json"
   register: assets
+  when: not latest
+
+- name: "Get the list of assets for the latest release"
+  uri:
+    url: "https://api.github.com/repos/{{ github_repo_owner }}/{{ github_repo_name }}/releases/latest"
+    method: GET
+    return_content: yes
+    headers:
+      Authorization: "token {{ github_auth_token }}"
+      Accept: "application/vnd.github.v3+json"
+  register: assets
+  when: latest
 
 - name: Download the specified release package
   command:
